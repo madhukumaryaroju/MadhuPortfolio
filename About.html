@@ -1,312 +1,337 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>About - Madhu Kumar</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About - Madhu Kumar</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
-<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
 
-<style>
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    font-family:'Poppins', sans-serif;
-    transition:0.3s;
-}
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+            transition: 0.3s;
+        }
 
-body{
-    background: linear-gradient(135deg,#f5f7fa,#e4e8f0);
-    color:#111;
-}
+        body {
+            background: linear-gradient(135deg, #f5f7fa, #e4e8f0);
+            color: #111;
+        }
 
-/* ===== DARK MODE ===== */
-body.dark{
-    background: linear-gradient(135deg,#0f172a,#1e293b);
-    color:#fff;
-}
+        /* ===== DARK MODE ===== */
+        body.dark {
+            background: linear-gradient(135deg, #0f172a, #1e293b);
+            color: #fff;
+        }
 
-body.dark nav{
-    background:#1e293b;
-}
+        body.dark nav {
+            background: #1e293b;
+        }
 
-body.dark nav ul li a{
-    color:#ddd;
-}
+        body.dark nav ul li a {
+            color: #ddd;
+        }
 
-body.dark .card{
-    background:#1e293b;
-    color:#fff;
-}
+        body.dark .card {
+            background: #1e293b;
+            color: #fff;
+        }
 
-body.dark .card p{
-    color:#ccc;
-}
+        body.dark .card p {
+            color: #ccc;
+        }
 
-/* ===== NAV ===== */
-nav{
-    width:100%;
-    background:white;
-    padding:15px 60px;
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    box-shadow:0 5px 20px rgba(0,0,0,0.05);
-}
+        /* ===== NAV ===== */
+        nav {
+            width: 100%;
+            background: white;
+            padding: 15px 60px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+        }
 
-nav h3{
-    font-weight:700;
-}
+        nav h3 {
+            font-weight: 700;
+        }
 
-nav ul{
-    list-style:none;
-    display:flex;
-    gap:25px;
-    align-items:center;
-}
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 25px;
+            align-items: center;
+        }
 
-nav ul li a{
-    text-decoration:none;
-    color:#444;
-    font-weight:500;
-    padding:8px 15px;
-    border-radius:8px;
-    transition:.3s;
-}
+        nav ul li a {
+            text-decoration: none;
+            color: #444;
+            font-weight: 500;
+            padding: 8px 15px;
+            border-radius: 8px;
+            transition: .3s;
+        }
 
-nav ul li a.active,
-nav ul li a:hover{
-    background:#1f2a44;
-    color:white;
-}
+        nav ul li a.active,
+        nav ul li a:hover {
+            background: #1f2a44;
+            color: white;
+        }
 
-/* ===== TOGGLE BUTTON ===== */
-.toggle-icon{
-    font-size:18px;
-    cursor:pointer;
-    color:#444;
-}
+        /* ===== TOGGLE BUTTON ===== */
+        .toggle-icon {
+            font-size: 18px;
+            cursor: pointer;
+            color: #444;
+        }
 
-body.dark .toggle-icon{
-    color:#facc15;
-}
+        body.dark .toggle-icon {
+            color: #facc15;
+        }
 
-body.dark nav ul li a.active,
-body.dark nav ul li a:hover{
-    background:#facc15;
-    color:black;
-}
-/* ===== ABOUT HEADER ===== */
-.about-header{
-    text-align:center;
-    padding:50px 20px 30px 20px;
-    max-width:800px;
-    margin:auto;
-}
+        body.dark nav ul li a.active,
+        body.dark nav ul li a:hover {
+            background: #facc15;
+            color: black;
+        }
 
-.about-header h1{
-    font-size:36px;
-    font-weight:700;
-    margin-bottom:20px;
-}
+        /* ===== ABOUT HEADER ===== */
+        .about-header {
+            text-align: center;
+            padding: 50px 20px 30px 20px;
+            max-width: 800px;
+            margin: auto;
+        }
 
-.about-header h1 span{
-    background: linear-gradient(90deg,#6c63ff,#00c6ff);
-    -webkit-background-clip:text;
-    -webkit-text-fill-color:transparent;
-}
+        .about-header h1 {
+            font-size: 36px;
+            font-weight: 700;
+            margin-bottom: 20px;
+        }
 
-.about-header p{
-    font-size:15px;
-    line-height:1.8;
-    color:#444;
-}
+        .about-header h1 span {
+            background: linear-gradient(90deg, #6c63ff, #00c6ff);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
 
-body.dark .about-header p{
-    color:#ccc;
-}
+        .about-header p {
+            font-size: 15px;
+            line-height: 1.8;
+            color: #444;
+            text-align: justify;
+        }
 
-/* ===== SECTION ===== */
-.section{
-    padding:60px 80px;
-    text-align:center;
-}
+        body.dark .about-header p {
+            color: #ccc;
+        }
 
-.section h2{
-    font-size:28px;
-    margin-bottom:10px;
-    background: linear-gradient(90deg,#6c63ff,#00c6ff);
-    -webkit-background-clip:text;
-    -webkit-text-fill-color:transparent;
-}
+        /* ===== SECTION ===== */
+        .section {
+            padding: 60px 80px;
+            text-align: center;
+        }
 
-.section p{
-    margin-bottom:40px;
-    color:#555;
-}
+        .section h2 {
+            font-size: 28px;
+            margin-bottom: 10px;
+            background: linear-gradient(90deg, #6c63ff, #00c6ff);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
 
-body.dark .section p{
-    color:#ccc;
-}
+        .section p {
+            margin-bottom: 40px;
+            color: #555;
+        }
 
-.cards{
-    display:flex;
-    justify-content:center;
-    gap:25px;
-    flex-wrap:wrap;
-}
+        body.dark .section p {
+            color: #ccc;
+        }
 
-.card{
-    background:white;
-    width:280px;
-    padding:25px;
-    border-radius:15px;
-    box-shadow:0 10px 25px rgba(0,0,0,0.08);
-    text-align:left;
-    transition:0.3s;
-}
+        .cards {
+            display: flex;
+            justify-content: center;
+            gap: 25px;
+            flex-wrap: wrap;
+        }
 
-.card:hover{
-    transform:translateY(-8px);
-    box-shadow:0 15px 35px rgba(0,0,0,0.15);
-}
+        .card {
+            background: white;
+            width: 280px;
+            padding: 25px;
+            border-radius: 15px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+            text-align: left;
+            transition: 0.3s;
+        }
 
-.card i{
-    font-size:28px;
-    color:#6c63ff;
-    margin-bottom:10px;
-}
+        .card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+        }
 
-.card h3{
-    font-size:16px;
-    margin-bottom:8px;
-}
+        .card i {
+            font-size: 28px;
+            color: #6c63ff;
+            margin-bottom: 10px;
+        }
 
-.card p{
-    font-size:13px;
-    color:#555;
-    margin-bottom:6px;
-}
+        .card h3 {
+            font-size: 16px;
+            margin-bottom: 8px;
+        }
 
-/* ===== FOOTER ===== */
-footer{
-    text-align:center;
-    padding:20px;
-    margin-top:40px;
-    font-size:14px;
-}
+        .card p {
+            font-size: 13px;
+            color: #555;
+            margin-bottom: 6px;
+        }
 
-/* ===== RESPONSIVE ===== */
-@media(max-width:900px){
-    .section{
-        padding:40px 20px;
-    }
+        /* ===== FOOTER ===== */
+        footer {
+            text-align: center;
+            padding: 20px;
+            margin-top: 40px;
+            font-size: 14px;
+        }
 
-    nav{
-        flex-direction:column;
-        gap:15px;
-    }
-}
-</style>
+        .resume-btn {
+            background: linear-gradient(90deg, #6c63ff, #00c6ff);
+            color: white !important;
+            padding: 8px 15px;
+            border-radius: 8px;
+            font-weight: 500;
+        }
+
+        .resume-btn:hover {
+            transform: scale(1.05);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        /* ===== RESPONSIVE ===== */
+        @media(max-width:900px) {
+            .section {
+                padding: 40px 20px;
+            }
+
+            nav {
+                flex-direction: column;
+                gap: 15px;
+            }
+        }
+    </style>
 </head>
 
 <body>
 
-<!-- NAVIGATION -->
-<nav>
-    <h3>Portfolio</h3>
-    <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="About.html" class="active">About</a></li>
-        <li><a href="Experience.html">Work Experience</a></li>
-        <li><a href="Tools.html">Skills & Tools</a></li>
-        <li><a href="Certifications.html">Certifications</a></li>
-        <li><a href="PersonalProjects.html">Personal Projects</a></li>
-        <li><a href="Contact.html">Contact</a></li>
-<li>
-    <i class="fas fa-moon toggle-icon" onclick="toggleMode()"></i>
-</li>
+    <!-- NAVIGATION -->
+    <nav>
+        <h3>Portfolio</h3>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="About.html" class="active">About</a></li>
+            <li><a href="Experience.html">Work Experience</a></li>
+            <li><a href="Tools.html">Skills & Tools</a></li>
+            <li><a href="Certifications.html">Certifications</a></li>
+            <li><a href="PersonalProjects.html">Personal Projects</a></li>
+            <li><a href="Contact.html">Contact</a></li>
+            <li>
+                <i class="fas fa-moon toggle-icon" onclick="toggleMode()"></i>
+            </li>
+            <li>
+                <a href="Madhukumae.pdf" download class="resume-btn">
+                    <i class="fas fa-file-arrow-down"></i> Resume
+                </a>
+            </li>
+        </ul>
+    </nav>
 
-    </ul>
-</nav>
+    <!-- ABOUT HEADER -->
+    <section class="about-header">
+        <h1>About <span>Me</span></h1>
+        <p>
+            Dynamic IT professional with 1+ years of experience as an Oracle HCM Consultant and Java Developer,
+            delivering end-to-end technical solutions across enterprise environments. Proficient in <b>Programming
+                Languages:</b> Java, JavaScript, PL/SQL, and SQL, with hands-on expertise in Oracle Fusion HCM
+            implementations and Java-based application development. Specialized in inbound and outbound data migrations
+            using <b>Oracle HCM Inbound Tools:</b> HDL and HSDL, as well as <b>Oracle HCM Outbound Tools:</b> BI
+            Publisher, OTBI, and HCM Extracts to design integrations and generate analytical reports. Proven ability to
+            translate complex business requirements into scalable, high-performance solutions through effective
+            cross-functional collaboration, ensuring data accuracy, system reliability.
+        </p>
 
-<!-- ABOUT HEADER -->
-<section class="about-header">
-    <h1>About <span>Me</span></h1>
-    <p>
-        <b>Java Developer</b> skilled in building <b>scalable, high-performance applications</b> 
-        using <b>Java</b> and <b>Spring Boot</b>. Experienced in designing 
-        <b>RESTful APIs</b>, working with <b>SQL/NoSQL databases</b>, and writing 
-        <b>clean, maintainable code</b>. Passionate about 
-        <b>problem-solving, continuous learning</b>, and delivering reliable software solutions.
-    </p>
-</section>
+    </section>
 
-<!-- EDUCATION -->
-<div class="section">
-    <h2><i class="fas fa-graduation-cap"></i> Education</h2>
-    <p>My academic journey and qualifications.</p>
+    <!-- EDUCATION -->
+    <div class="section">
+        <h2><i class="fas fa-graduation-cap"></i> Education</h2>
+        <p>My academic journey and qualifications.</p>
 
-    <div class="cards">
-        <div class="card">
-            <i class="fas fa-graduation-cap"></i>
-            <h3>B.E. - Electronics & Communication Engineering</h3>
-            <p>SNS College of Technology, Coimbatore</p>
-            <p>2021 - 2025</p>
-            <p><b>CGPA: 7.44 / 10</b></p>
-        </div>
+        <div class="cards">
+            <div class="card">
+                <i class="fas fa-graduation-cap"></i>
+                <h3>B.E. - Electronics & Computer Engineering</h3>
+                <p>J B Institute Engineering and Technology, Hyderabad</p>
+                <p>2020 - 2024</p>
+                <p><b>CGPA: 7.97 / 10</b></p>
+            </div>
 
-        <div class="card">
-            <i class="fas fa-school"></i>
-            <h3>Higher Secondary Education (HSC)</h3>
-            <p>Kamarajar Matric Hr. Sec. School</p>
-            <p>2020 - 2021</p>
-            <p><b>Percentage: 74.6%</b></p>
-        </div>
+            <div class="card">
+                <i class="fas fa-school"></i>
+                <h3>Intermediate (MPC)</h3>
+                <p>Narayana Junior College, Taranaka </p>
+                <p>2018 - 2020</p>
+                <p><b>Percentage: 81%</b></p>
+            </div>
 
-        <div class="card">
-            <i class="fas fa-book"></i>
-            <h3>Primary School</h3>
-            <p>Kamarajar Matriculation School</p>
-            <p>2018 - 2019</p>
-            <p><b>Percentage: 61.5%</b></p>
+            <div class="card">
+                <i class="fas fa-book"></i>
+                <h3>SSC (10th Standard)</h3>
+                <p>S.F.S High School Shanthinagar</p>
+                <p>2017 - 2018</p>
+                <p><b>Percentage: 82%</b></p>
+            </div>
         </div>
     </div>
-</div>
 
-<footer>
-    © 2025 Madhu Kumar ❤️ All Rights Reserved.
-</footer>
+    <footer>
+        © 2025 Madhu Kumar Y © All Rights Reserved.
+    </footer>
 
-<script>
-function toggleMode(){
-    document.body.classList.toggle("dark");
+    <script>
+        function toggleMode() {
+            document.body.classList.toggle("dark");
 
-    const icon = document.querySelector(".toggle-icon");
+            const icon = document.querySelector(".toggle-icon");
 
-    if(document.body.classList.contains("dark")){
-        icon.classList.remove("fa-moon");
-        icon.classList.add("fa-sun");
-        localStorage.setItem("mode","dark");
-    } else {
-        icon.classList.remove("fa-sun");
-        icon.classList.add("fa-moon");
-        localStorage.setItem("mode","light");
-    }
-}
+            if (document.body.classList.contains("dark")) {
+                icon.classList.remove("fa-moon");
+                icon.classList.add("fa-sun");
+                localStorage.setItem("mode", "dark");
+            } else {
+                icon.classList.remove("fa-sun");
+                icon.classList.add("fa-moon");
+                localStorage.setItem("mode", "light");
+            }
+        }
 
-// Remember mode on reload
-const icon = document.querySelector(".toggle-icon");
+        // Remember mode on reload
+        const icon = document.querySelector(".toggle-icon");
 
-if(localStorage.getItem("mode")==="dark"){
-    document.body.classList.add("dark");
-    icon.classList.remove("fa-moon");
-    icon.classList.add("fa-sun");
-}
-</script>
+        if (localStorage.getItem("mode") === "dark") {
+            document.body.classList.add("dark");
+            icon.classList.remove("fa-moon");
+            icon.classList.add("fa-sun");
+        }
+    </script>
 
 
 </body>
+
 </html>

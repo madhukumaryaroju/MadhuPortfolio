@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <title>Madhu Kumar Portfolio</title>
@@ -12,7 +13,6 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
 
     <style>
-
         /* ================= RESET ================= */
 
         * {
@@ -32,54 +32,54 @@
 
         /* ================= NAVBAR ================= */
 
-        nav{
-            width:100%;
-            background:white;
-            padding:15px 60px;
-            display:flex;
-            justify-content:space-between;
-            align-items:center;
-            box-shadow:0 5px 20px rgba(0,0,0,0.05);
-            transition:0.3s;
+        nav {
+            width: 100%;
+            background: white;
+            padding: 15px 60px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+            transition: 0.3s;
         }
 
-        nav h3{
-            font-weight:700;
+        nav h3 {
+            font-weight: 700;
         }
 
-        nav ul{
-            list-style:none;
-            display:flex;
-            align-items:center;
-            gap:25px;
+        nav ul {
+            list-style: none;
+            display: flex;
+            align-items: center;
+            gap: 25px;
         }
 
-        nav ul li a{
-            text-decoration:none;
-            color:#444;
-            font-weight:500;
-            padding:8px 15px;
-            border-radius:8px;
-            transition:.3s;
+        nav ul li a {
+            text-decoration: none;
+            color: #444;
+            font-weight: 500;
+            padding: 8px 15px;
+            border-radius: 8px;
+            transition: .3s;
         }
 
         nav ul li a.active,
-        nav ul li a:hover{
-            background:#1f2a44;
-            color:white;
+        nav ul li a:hover {
+            background: #1f2a44;
+            color: white;
         }
 
         /* ===== Toggle Icon (NO BACKGROUND) ===== */
 
-        .toggle-icon{
-            font-size:18px;
-            cursor:pointer;
-            color:#444;
-            transition:0.3s;
+        .toggle-icon {
+            font-size: 18px;
+            cursor: pointer;
+            color: #444;
+            transition: 0.3s;
         }
 
-        .toggle-icon:hover{
-            transform:rotate(20deg);
+        .toggle-icon:hover {
+            transform: rotate(20deg);
         }
 
         /* ================= HERO SECTION ================= */
@@ -119,6 +119,8 @@
             max-width: 500px;
             margin-bottom: 20px;
             line-height: 1.6;
+            text-align: justify;
+            ;
         }
 
         .socials {
@@ -165,39 +167,39 @@
 
         /* ================= DARK MODE ================= */
 
-        body.dark{
+        body.dark {
             background: linear-gradient(135deg, #0f172a, #1e293b);
             color: white;
         }
 
-        body.dark nav{
-            background:#1f2937;
+        body.dark nav {
+            background: #1f2937;
         }
 
-        body.dark nav ul li a{
-            color:#ddd;
+        body.dark nav ul li a {
+            color: #ddd;
         }
 
         body.dark nav ul li a.active,
-        body.dark nav ul li a:hover{
-            background:#facc15;
-            color:black;
+        body.dark nav ul li a:hover {
+            background: #facc15;
+            color: black;
         }
 
-        body.dark .toggle-icon{
-            color:#facc15;
+        body.dark .toggle-icon {
+            color: #facc15;
         }
 
-        body.dark .typing{
-            color:#facc15;
+        body.dark .typing {
+            color: #facc15;
         }
 
-        body.dark .image-card{
-            background:#1f2937;
+        body.dark .image-card {
+            background: #1f2937;
         }
 
-        body.dark .socials i:hover{
-            color:#facc15;
+        body.dark .socials i:hover {
+            color: #facc15;
         }
 
         /* ================= FOOTER ================= */
@@ -207,6 +209,20 @@
             padding: 15px;
             font-size: 14px;
         }
+
+        .resume-btn {
+            background: linear-gradient(90deg, #6c63ff, #00c6ff);
+            color: white !important;
+            padding: 8px 15px;
+            border-radius: 8px;
+            font-weight: 500;
+        }
+
+        .resume-btn:hover {
+            transform: scale(1.05);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+
 
         /* ================= RESPONSIVE ================= */
 
@@ -230,138 +246,160 @@
                 width: 250px;
             }
         }
-
     </style>
 </head>
 
 <body>
 
-<!-- ================= NAVBAR ================= -->
+    <!-- ================= NAVBAR ================= -->
 
-<nav>
-    <h3>Portfolio</h3>
-    <ul>
-        <li><a href="index.html" class="active">Home</a></li>
-        <li><a href="About.html">About</a></li>
-        <li><a href="Experience.html">Work Experience</a></li>
-        <li><a href="Tools.html">Skills & Tools</a></li>
-        <li><a href="Certifications.html">Certifications</a></li>
-        <li><a href="PersonalProjects.html">Personal Projects</a></li>
-        <li><a href="CONTACT.HTML">Contact</a></li>
-        <li>
-            <i class="fas fa-moon toggle-icon" onclick="toggleMode()"></i>
-        </li>
-    </ul>
-</nav>
+    <nav>
+        <h3>Portfolio</h3>
+        <ul>
+            <li><a href="index.html" class="active">Home</a></li>
+            <li><a href="About.html">About</a></li>
+            <li><a href="Experience.html">Work Experience</a></li>
+            <li><a href="Tools.html">Skills & Tools</a></li>
+            <li><a href="Certifications.html">Certifications</a></li>
+            <li><a href="PersonalProjects.html">Personal Projects</a></li>
+            <li><a href="CONTACT.HTML">Contact</a></li>
+            <li>
+                <i class="fas fa-moon toggle-icon" onclick="toggleMode()"></i>
+            </li>
+            <li>
+                <a href="Madhukumae.pdf" download class="resume-btn">
+                    <i class="fas fa-file-arrow-down"></i> Resume
+                </a>
+            </li>
+        </ul>
+    </nav>
 
-<!-- ================= HERO ================= -->
+    <!-- ================= HERO ================= -->
 
-<div class="container">
+    <div class="container">
 
-    <div class="left">
-        <h1>Hi, I'm <span class="gradient-text">Anandaraj P</span></h1>
-        <div class="typing" id="typing"></div>
+        <div class="left">
+            <h1>Hi, I am <br><span class="gradient-text">MADHU KUMAR YAROJU</span></h1>
+            <div class="typing" id="typing"></div>
 
-        <p>
-            Java Full Stack Developer specializing in Spring Boot backend
-            and modern React-based frontend applications.
-        </p>
+            <p>
+                Oracle HCM Consultant and Java Developer with expertise in Oracle Fusion Cloud HCM and Java-based
+                enterprise applications, specializing in data migrations, integrations, and scalable backend solutions.
+                Proven ability to transform business requirements into optimized, high-performance systems that ensure
+                data accuracy, seamless integration, and operational excellence.
+            </p>
 
-        <div>📍 Chennai, Tamil Nadu | 📞 +91 9944196247</div>
+            <div>📍 Hyderabad, Telangana | 📞 +91 7993394286</div>
 
-        <div class="socials">
-            <i class="fab fa-whatsapp"></i>
-            <i class="fab fa-linkedin"></i>
-            <i class="fab fa-github"></i>
+            <div class="socials">
+                <!-- WhatsApp -->
+                <a href="https://wa.me/917993394286" target="_blank" rel="noopener noreferrer"
+                    aria-label="Chat on WhatsApp">
+                    <i class="fab fa-whatsapp"></i>
+                </a>
+
+                <!-- LinkedIn -->
+                <a href="https://www.linkedin.com/in/madhu-kumar-yaroju-415431224/" target="_blank"
+                    rel="noopener noreferrer" aria-label="Visit LinkedIn Profile">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+
+                <!-- GitHub -->
+                <a href="https://github.com/madhukumaryaroju" target="_blank" rel="noopener noreferrer"
+                    aria-label="Visit GitHub Profile">
+                    <i class="fab fa-github"></i>
+                </a>
+
+            </div>
         </div>
+
+        <div class="right">
+            <div class="image-card">
+                <img src="im.jpeg" alt="Profile Image">
+            </div>
+        </div>
+
     </div>
 
-    <div class="right">
-        <div class="image-card">
-            <img src="im.jpeg" alt="Profile Image">
-        </div>
-    </div>
+    <!-- ================= FOOTER ================= -->
 
-</div>
+    <footer>
+        © 2025 Madhu Kumar Y © All Rights Reserved.
+    </footer>
 
-<!-- ================= FOOTER ================= -->
+    <!-- ================= SCRIPT ================= -->
 
-<footer>
-    © 2025 Anandaraj P ❤️ All Rights Reserved.
-</footer>
+    <script>
 
-<!-- ================= SCRIPT ================= -->
+        /* ===== Dark Mode ===== */
 
-<script>
+        function toggleMode() {
+            document.body.classList.toggle("dark");
 
-    /* ===== Dark Mode ===== */
+            const icon = document.querySelector(".toggle-icon");
 
-    function toggleMode(){
-        document.body.classList.toggle("dark");
+            if (document.body.classList.contains("dark")) {
+                icon.classList.remove("fa-moon");
+                icon.classList.add("fa-sun");
+                localStorage.setItem("mode", "dark");
+            } else {
+                icon.classList.remove("fa-sun");
+                icon.classList.add("fa-moon");
+                localStorage.setItem("mode", "light");
+            }
+        }
 
         const icon = document.querySelector(".toggle-icon");
 
-        if(document.body.classList.contains("dark")){
+        if (localStorage.getItem("mode") === "dark") {
+            document.body.classList.add("dark");
             icon.classList.remove("fa-moon");
             icon.classList.add("fa-sun");
-            localStorage.setItem("mode","dark");
-        } else {
-            icon.classList.remove("fa-sun");
-            icon.classList.add("fa-moon");
-            localStorage.setItem("mode","light");
-        }
-    }
-
-    const icon = document.querySelector(".toggle-icon");
-
-    if(localStorage.getItem("mode")==="dark"){
-        document.body.classList.add("dark");
-        icon.classList.remove("fa-moon");
-        icon.classList.add("fa-sun");
-    }
-
-
-    /* ===== Typing Effect ===== */
-
-    const roles = ["Java Developer", "Spring Boot Expert", "React Developer"];
-    let i = 0, j = 0;
-    let current = "";
-    let isDeleting = false;
-
-    function typeEffect() {
-        if (i < roles.length) {
-
-            if (!isDeleting && j <= roles[i].length) {
-                current = roles[i].substring(0, j++);
-            }
-
-            if (isDeleting && j >= 0) {
-                current = roles[i].substring(0, j--);
-            }
-
-            document.getElementById("typing").innerHTML = current;
-
-            if (j === roles[i].length) {
-                isDeleting = true;
-                setTimeout(typeEffect, 1000);
-                return;
-            }
-
-            if (isDeleting && j === 0) {
-                isDeleting = false;
-                i++;
-            }
-
-        } else {
-            i = 0;
         }
 
-        setTimeout(typeEffect, 100);
-    }
 
-    typeEffect();
+        /* ===== Typing Effect ===== */
 
-</script>
+        const roles = ["Oracle Consultant ", "Oracle HCM Consultant ", "Java Developer"];
+        let i = 0, j = 0;
+        let current = "";
+        let isDeleting = false;
+
+        function typeEffect() {
+            if (i < roles.length) {
+
+                if (!isDeleting && j <= roles[i].length) {
+                    current = roles[i].substring(0, j++);
+                }
+
+                if (isDeleting && j >= 0) {
+                    current = roles[i].substring(0, j--);
+                }
+
+                document.getElementById("typing").innerHTML = current;
+
+                if (j === roles[i].length) {
+                    isDeleting = true;
+                    setTimeout(typeEffect, 1000);
+                    return;
+                }
+
+                if (isDeleting && j === 0) {
+                    isDeleting = false;
+                    i++;
+                }
+
+            } else {
+                i = 0;
+            }
+
+            setTimeout(typeEffect, 100);
+        }
+
+        typeEffect();
+
+    </script>
 
 </body>
+
 </html>

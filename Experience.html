@@ -1,368 +1,391 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Experience - Madhu Kumar</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Experience - Madhu Kumar</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
-<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
 
-<style>
+    <style>
+        /* ================= GLOBAL ================= */
 
-/* ================= GLOBAL ================= */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
 
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    font-family:'Poppins', sans-serif;
-}
+        body {
+            background: linear-gradient(135deg, #f5f7fa, #e4e8f0);
+            transition: 0.3s ease;
+        }
 
-body{
-    background: linear-gradient(135deg,#f5f7fa,#e4e8f0);
-    transition:0.3s ease;
-}
+        /* ================= NAVBAR ================= */
 
-/* ================= NAVBAR ================= */
+        nav {
+            width: 100%;
+            background: white;
+            padding: 15px 60px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+            transition: 0.3s;
+        }
 
-nav{
-    width:100%;
-    background:white;
-    padding:15px 60px;
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    box-shadow:0 5px 20px rgba(0,0,0,0.05);
-    transition:0.3s;
-}
+        nav h3 {
+            font-weight: 700;
+        }
 
-nav h3{
-    font-weight:700;
-}
+        nav ul {
+            list-style: none;
+            display: flex;
+            align-items: center;
+            gap: 25px;
+        }
 
-nav ul{
-    list-style:none;
-    display:flex;
-    align-items:center;
-    gap:25px;
-}
+        nav ul li a {
+            text-decoration: none;
+            color: #444;
+            font-weight: 500;
+            padding: 8px 15px;
+            border-radius: 8px;
+            transition: .3s;
+        }
 
-nav ul li a{
-    text-decoration:none;
-    color:#444;
-    font-weight:500;
-    padding:8px 15px;
-    border-radius:8px;
-    transition:.3s;
-}
+        nav ul li a.active,
+        nav ul li a:hover {
+            background: #1f2a44;
+            color: white;
+        }
 
-nav ul li a.active,
-nav ul li a:hover{
-    background:#1f2a44;
-    color:white;
-}
+        /* ===== Toggle Icon (NO BACKGROUND) ===== */
 
-/* ===== Toggle Icon (NO BACKGROUND) ===== */
+        .toggle-icon {
+            font-size: 18px;
+            cursor: pointer;
+            color: #444;
+            transition: 0.3s;
+        }
 
-.toggle-icon{
-    font-size:18px;
-    cursor:pointer;
-    color:#444;
-    transition:0.3s;
-}
+        .toggle-icon:hover {
+            transform: rotate(20deg);
+        }
 
-.toggle-icon:hover{
-    transform:rotate(20deg);
-}
+        /* ================= HEADER ================= */
 
-/* ================= HEADER ================= */
+        .section-header {
+            text-align: center;
+            margin-top: 60px;
+        }
 
-.section-header{
-    text-align:center;
-    margin-top:60px;
-}
+        .section-header h1 {
+            font-size: 34px;
+            font-weight: 700;
+        }
 
-.section-header h1{
-    font-size:34px;
-    font-weight:700;
-}
+        .section-header span {
+            background: linear-gradient(90deg, #6c63ff, #00c6ff);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
 
-.section-header span{
-    background: linear-gradient(90deg,#6c63ff,#00c6ff);
-    -webkit-background-clip:text;
-    -webkit-text-fill-color:transparent;
-}
+        .section-header p {
+            margin-top: 10px;
+            color: #555;
+        }
 
-.section-header p{
-    margin-top:10px;
-    color:#555;
-}
+        /* ================= TIMELINE ================= */
 
-/* ================= TIMELINE ================= */
+        .timeline {
+            position: relative;
+            max-width: 1000px;
+            margin: 70px auto;
+        }
 
-.timeline{
-    position:relative;
-    max-width:1000px;
-    margin:70px auto;
-}
+        .timeline::after {
+            content: '';
+            position: absolute;
+            width: 2px;
+            background: #ccc;
+            top: 0;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+        }
 
-.timeline::after{
-    content:'';
-    position:absolute;
-    width:2px;
-    background:#ccc;
-    top:0;
-    bottom:0;
-    left:50%;
-    transform:translateX(-50%);
-}
+        .container {
+            padding: 20px 40px;
+            position: relative;
+            width: 50%;
+        }
 
-.container{
-    padding:20px 40px;
-    position:relative;
-    width:50%;
-}
+        .left {
+            left: 0;
+        }
 
-.left{
-    left:0;
-}
+        .right {
+            left: 50%;
+        }
 
-.right{
-    left:50%;
-}
+        .content {
+            background: white;
+            padding: 25px;
+            border-radius: 15px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+            border-bottom: 4px solid #00c6ff;
+            transition: 0.3s;
+        }
 
-.content{
-    background:white;
-    padding:25px;
-    border-radius:15px;
-    box-shadow:0 10px 25px rgba(0,0,0,0.08);
-    border-bottom:4px solid #00c6ff;
-    transition:0.3s;
-}
+        .container::after {
+            content: "\f11e";
+            font-family: "Font Awesome 6 Free";
+            font-weight: 900;
+            position: absolute;
+            top: 20px;
+            right: -14px;
+            background: white;
+            color: #6c63ff;
+            border: 3px solid #6c63ff;
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 1;
+            font-size: 14px;
+        }
 
-.container::after{
-    content:"\f11e";
-    font-family:"Font Awesome 6 Free";
-    font-weight:900;
-    position:absolute;
-    top:20px;
-    right:-14px;
-    background:white;
-    color:#6c63ff;
-    border:3px solid #6c63ff;
-    width:32px;
-    height:32px;
-    border-radius:50%;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    z-index:1;
-    font-size:14px;
-}
+        .right::after {
+            left: -14px;
+        }
 
-.right::after{
-    left:-14px;
-}
+        .content h3 {
+            margin-bottom: 5px;
+        }
 
-.content h3{
-    margin-bottom:5px;
-}
+        .content h4 {
+            font-size: 14px;
+            margin-bottom: 10px;
+            color: #6c63ff;
+        }
 
-.content h4{
-    font-size:14px;
-    margin-bottom:10px;
-    color:#6c63ff;
-}
+        .content ul {
+            padding-left: 18px;
+        }
 
-.content ul{
-    padding-left:18px;
-}
+        .content ul li {
+            margin-bottom: 8px;
+            font-size: 14px;
+            color: #444;
+        }
 
-.content ul li{
-    margin-bottom:8px;
-    font-size:14px;
-    color:#444;
-}
+        /* ================= DARK MODE ================= */
 
-/* ================= DARK MODE ================= */
+        body.dark {
+            background: #111827;
+            color: white;
+        }
 
-body.dark{
-    background:#111827;
-    color:white;
-}
+        body.dark nav {
+            background: #1f2937;
+        }
 
-body.dark nav{
-    background:#1f2937;
-}
+        body.dark nav ul li a {
+            color: #ddd;
+        }
 
-body.dark nav ul li a{
-    color:#ddd;
-}
+        body.dark nav ul li a.active,
+        body.dark nav ul li a:hover {
+            background: #facc15;
+            color: black;
+        }
 
-body.dark nav ul li a.active,
-body.dark nav ul li a:hover{
-    background:#facc15;
-    color:black;
-}
+        body.dark .toggle-icon {
+            color: #facc15;
+        }
 
-body.dark .toggle-icon{
-    color:#facc15;
-}
+        body.dark .section-header p {
+            color: #ccc;
+        }
 
-body.dark .section-header p{
-    color:#ccc;
-}
+        body.dark .timeline::after {
+            background: #444;
+        }
 
-body.dark .timeline::after{
-    background:#444;
-}
+        body.dark .content {
+            background: #1f2937;
+            color: white;
+            border-bottom: 4px solid #facc15;
+        }
 
-body.dark .content{
-    background:#1f2937;
-    color:white;
-    border-bottom:4px solid #facc15;
-}
+        body.dark .content ul li {
+            color: #ddd;
+        }
 
-body.dark .content ul li{
-    color:#ddd;
-}
+        /* ================= RESPONSIVE ================= */
 
-/* ================= RESPONSIVE ================= */
+        @media(max-width:900px) {
 
-@media(max-width:900px){
+            .timeline::after {
+                left: 20px;
+            }
 
-.timeline::after{
-    left:20px;
-}
+            .container {
+                width: 100%;
+                padding-left: 70px;
+                padding-right: 25px;
+            }
 
-.container{
-    width:100%;
-    padding-left:70px;
-    padding-right:25px;
-}
+            .right {
+                left: 0%;
+            }
 
-.right{
-    left:0%;
-}
+            .container::after {
+                left: 11px;
+            }
 
-.container::after{
-    left:11px;
-}
+        }
 
-}
+        .resume-btn {
+            background: linear-gradient(90deg, #6c63ff, #00c6ff);
+            color: white !important;
+            padding: 8px 15px;
+            border-radius: 8px;
+            font-weight: 500;
+        }
 
-footer{
-    text-align:center;
-    padding:20px;
-    margin-top:40px;
-}
+        .resume-btn:hover {
+            transform: scale(1.05);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
 
-</style>
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            margin-top: 40px;
+        }
+    </style>
 </head>
 
 <body>
 
-<!-- ================= NAVBAR ================= -->
+    <!-- ================= NAVBAR ================= -->
 
-<nav>
-    <h3>Portfolio</h3>
-    <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="About.html">About</a></li>
-        <li><a href="Experience.html" class="active">Work Experience</a></li>
-        <li><a href="Tools.html">Skills & Tools</a></li>
-        <li><a href="Certifications.html">Certifications</a></li>
-        <li><a href="PersonalProjects.html">Personal Projects</a></li>
-        <li><a href="CONTACT.HTML">Contact</a></li>
-        <li>
-            <i class="fas fa-moon toggle-icon" onclick="toggleMode()"></i>
-        </li>
-    </ul>
-</nav>
+    <nav>
+        <h3>Portfolio</h3>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="About.html">About</a></li>
+            <li><a href="Experience.html" class="active">Work Experience</a></li>
+            <li><a href="Tools.html">Skills & Tools</a></li>
+            <li><a href="Certifications.html">Certifications</a></li>
+            <li><a href="PersonalProjects.html">Personal Projects</a></li>
+            <li><a href="CONTACT.HTML">Contact</a></li>
+            <li>
+                <i class="fas fa-moon toggle-icon" onclick="toggleMode()"></i>
+            </li>
+            <li>
+                <a href="Madhukumae.pdf" download class="resume-btn">
+                    <i class="fas fa-file-arrow-down"></i> Resume
+                </a>
+            </li>
+        </ul>
+    </nav>
 
-<!-- ================= HEADER ================= -->
+    <!-- ================= HEADER ================= -->
 
-<div class="section-header">
-    <h1>Professional <span>Experience</span></h1>
-    <p>My journey through internships and real-world projects.</p>
-</div>
+    <div class="section-header">
+        <h1>Professional <span>Experience</span></h1>
+        <p>My journey through internships and real-world projects.</p>
+    </div>
 
-<!-- ================= TIMELINE ================= -->
+    <!-- ================= TIMELINE ================= -->
 
-<div class="timeline">
+    <div class="timeline">
 
-    <div class="container left">
-        <div class="content">
-            <h3>Software Developer</h3>
-            <h4>FT Digital Solutions | Dec 2025 - Present</h4>
-            <ul>
-                <li>Built API-based E-commerce platform with authentication and order processing.</li>
-                <li>Developed RESTful APIs for products, carts, users and payments.</li>
-                <li>Integrated payment gateway APIs for secure transactions.</li>
-                <li>Designed scalable backend architecture with role-based access control.</li>
-            </ul>
+        <div class="container left">
+            <div class="content">
+                <h3>Associate Consultant</h3>
+                <h4>Sita Corp Pvt Ltd | Jun 2025 - Present</h4>
+                <ul>
+                    <li>Developed and maintained BI Publisher, OTBI reports, and HCM Extracts to support outbound
+                        integrations and enterprise reporting.</li>
+                    <li>Implemented inbound loopback integrations using BI Publisher, HDL, and HSDL to ensure accurate
+                        and reliable data exchange in Oracle Fusion HCM.</li>
+                    <li>Delivered end-to-end Oracle HCM implementations across Core HR, Benefits, Absence, and
+                        Compensation, covering design through go-live support.</li>
+
+                </ul>
+
+            </div>
+        </div>
+
+        <div class="container right">
+            <div class="content">
+                <h3>Oracle Consultant Trainee</h3>
+                <h4>JOLT Technologies | Jan 2025 - May 2025</h4>
+                <ul>
+                    <li> Developed and maintained BI Publisher, OTBI reports, and HCM Extracts to support
+                        outbound integrations and enterprise-wide reporting requirements. </li>
+                    <li>Implemented inbound loopback integrations using BI Publisher, HDL, and HSDL,
+                        ensuring accurate, consistent, and reliable data exchange within Oracle Fusion HCM. </li>
+                </ul>
+            </div>
+        </div>
+
+
+        <div class="container left">
+            <div class="content">
+                <h3>Full Stack Developer Trainee</h3>
+                <h4>Great Code Technologies | Jun 2024 - Jan 2025</h4>
+                <ul>
+                    <li>Built chat application using Spring Boot and Hibernate with MySQL.</li>
+                    <li>Implemented secure authentication.</li>
+                    <li>Designed RESTful APIs for user and message handling.</li>
+                </ul>
+            </div>
         </div>
     </div>
 
-    <div class="container right">
-        <div class="content">
-            <h3>Full Stack Developer Trainee</h3>
-            <h4>JSpiders | July 2025 - Nov 2025</h4>
-            <ul>
-                <li>Built chat application using Spring Boot and Hibernate with MySQL.</li>
-                <li>Implemented secure authentication.</li>
-                <li>Designed RESTful APIs for user and message handling.</li>
-            </ul>
-        </div>
-    </div>
+    <footer>
+        © 2025 Madhu Kumar Y © All Rights Reserved.
+    </footer>
 
+    <!-- ================= DARK MODE SCRIPT ================= -->
 
-    <div class="container left">
-        <div class="content">
-            <h3>Software Developer</h3>
-            <h4>FT Digital Solutions | Dec 2025 - Present</h4>
-            <ul>
-                <li>Built API-based E-commerce platform with authentication and order processing.</li>
-                <li>Developed RESTful APIs for products, carts, users and payments.</li>
-                <li>Integrated payment gateway APIs for secure transactions.</li>
-                <li>Designed scalable backend architecture with role-based access control.</li>
-            </ul>
-        </div>
-    </div>
-</div>
+    <script>
+        function toggleMode() {
+            document.body.classList.toggle("dark");
 
-<footer>
-    © 2025 Madhu Kumar ❤️ All Rights Reserved.
-</footer>
+            const icon = document.querySelector(".toggle-icon");
 
-<!-- ================= DARK MODE SCRIPT ================= -->
+            if (document.body.classList.contains("dark")) {
+                icon.classList.remove("fa-moon");
+                icon.classList.add("fa-sun");
+                localStorage.setItem("mode", "dark");
+            } else {
+                icon.classList.remove("fa-sun");
+                icon.classList.add("fa-moon");
+                localStorage.setItem("mode", "light");
+            }
+        }
 
-<script>
-function toggleMode(){
-    document.body.classList.toggle("dark");
+        const icon = document.querySelector(".toggle-icon");
 
-    const icon = document.querySelector(".toggle-icon");
-
-    if(document.body.classList.contains("dark")){
-        icon.classList.remove("fa-moon");
-        icon.classList.add("fa-sun");
-        localStorage.setItem("mode","dark");
-    } else {
-        icon.classList.remove("fa-sun");
-        icon.classList.add("fa-moon");
-        localStorage.setItem("mode","light");
-    }
-}
-
-const icon = document.querySelector(".toggle-icon");
-
-if(localStorage.getItem("mode")==="dark"){
-    document.body.classList.add("dark");
-    icon.classList.remove("fa-moon");
-    icon.classList.add("fa-sun");
-}
-</script>
+        if (localStorage.getItem("mode") === "dark") {
+            document.body.classList.add("dark");
+            icon.classList.remove("fa-moon");
+            icon.classList.add("fa-sun");
+        }
+    </script>
 
 </body>
+
 </html>

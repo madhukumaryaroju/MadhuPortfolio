@@ -13,7 +13,6 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
     <style>
-
         /* ================= GLOBAL ================= */
 
         * {
@@ -152,23 +151,73 @@
 
         /* ================= BRAND COLORS ================= */
 
-        .java { color: #f89820; }
-        .js { color: #facc15; }
-        .spring { color: #22c55e; }
-        .html { color: #f97316; }
-        .css { color: #3b82f6; }
-        .mysql { color: #0ea5e9; }
-        .aws { color: #f59e0b; }
-        .oracle { color: #dc2626; }
-        .service { color: #16a34a; }
-        .jira { color: #2563eb; }
-        .postman { color: #f97316; }
-        .sql { color: #6366f1; }
-        .xml { color: #ec4899; }
-        .json { color: #0ea5e9; }
-        .sonar { color: #7c3aed; }
-        .hcm { color: #dc2626; }
-        .oci { color: #ea580c; }
+        .java {
+            color: #f89820;
+        }
+
+        .js {
+            color: #facc15;
+        }
+
+        .spring {
+            color: #22c55e;
+        }
+
+        .html {
+            color: #f97316;
+        }
+
+        .css {
+            color: #3b82f6;
+        }
+
+        .mysql {
+            color: #0ea5e9;
+        }
+
+        .aws {
+            color: #f59e0b;
+        }
+
+        .oracle {
+            color: #dc2626;
+        }
+
+        .service {
+            color: #16a34a;
+        }
+
+        .jira {
+            color: #2563eb;
+        }
+
+        .postman {
+            color: #f97316;
+        }
+
+        .sql {
+            color: #6366f1;
+        }
+
+        .xml {
+            color: #ec4899;
+        }
+
+        .json {
+            color: #0ea5e9;
+        }
+
+        .sonar {
+            color: #7c3aed;
+        }
+
+        .hcm {
+            color: #dc2626;
+        }
+
+        .oci {
+            color: #ea580c;
+        }
 
         /* ================= DARK MODE ================= */
 
@@ -205,12 +254,33 @@
 
         body.dark .skill-card {
             background: #1e293b;
-            box-shadow: 0 15px 40px rgba(0,0,0,0.5);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.5);
         }
 
         body.dark .skill-card h4 {
             color: #f1f5f9;
         }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            margin-top: 40px;
+            font-size: 14px;
+        }
+
+        .resume-btn {
+            background: linear-gradient(90deg, #6c63ff, #00c6ff);
+            color: white !important;
+            padding: 8px 15px;
+            border-radius: 8px;
+            font-weight: 500;
+        }
+
+        .resume-btn:hover {
+            transform: scale(1.05);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+
 
         /* ================= RESPONSIVE ================= */
 
@@ -225,7 +295,6 @@
                 grid-template-columns: repeat(2, 1fr);
             }
         }
-
     </style>
 </head>
 
@@ -247,6 +316,12 @@
             <li>
                 <i class="fas fa-moon toggle-icon" onclick="toggleMode()"></i>
             </li>
+
+            <li>
+                <a href="Madhukumae.pdf" download class="resume-btn">
+                    <i class="fas fa-file-arrow-down"></i> Resume
+                </a>
+            </li>
         </ul>
     </nav>
 
@@ -257,40 +332,99 @@
     </div>
 
     <!-- ORACLE SECTION -->
-    <div class="section-title">Oracle & Reporting Tools</div>
+    <div class="section-title">Oracle HCM Tools</div>
     <div class="skills-container">
-        <div class="skill-card"><i class="fas fa-file-alt oracle"></i><h4>BI Publisher</h4></div>
-        <div class="skill-card"><i class="fas fa-chart-bar oracle"></i><h4>OTBI</h4></div>
-        <div class="skill-card"><i class="fas fa-database oracle"></i><h4>HCM Extracts</h4></div>
-        <div class="skill-card"><i class="fas fa-upload oracle"></i><h4>HDL</h4></div>
-        <div class="skill-card"><i class="fas fa-table oracle"></i><h4>HSDL</h4></div>
+        <div class="skill-card"><i class="fas fa-file-alt oracle"></i>
+            <h4>BI Publisher</h4>
+        </div>
+        <div class="skill-card"><i class="fas fa-chart-bar oracle"></i>
+            <h4>OTBI</h4>
+        </div>
+        <div class="skill-card"><i class="fas fa-database oracle"></i>
+            <h4>HCM Extracts</h4>
+        </div>
+        <div class="skill-card"><i class="fas fa-upload oracle"></i>
+            <h4>HDL</h4>
+        </div>
+        <div class="skill-card"><i class="fas fa-table oracle"></i>
+            <h4>HSDL</h4>
+        </div>
+    </div>
+    <!-- INTEGRATION SECTION -->
+    <div class="section-title">Programming Languages</div>
+    <div class="skills-container">
+        <div class="skill-card"><i class="fas fa-code sql"></i>
+            <h4>SQL</h4>
+        </div>
+        <div class="skill-card"><i class="fas fa-file-code xml"></i>
+            <h4>XML</h4>
+        </div>
+        <div class="skill-card"><i class="fas fa-brackets-curly json"></i>
+            <h4>JSON</h4>
+        </div>
+        <div class="skill-card"><i class="fab fa-java java"></i>
+            <h4>Java</h4>
+        </div>
+        <div class="skill-card"><i class="fab fa-js js"></i>
+            <h4>JavaScript</h4>
+        </div>
+        <div class="skill-card"><i class="fas fa-leaf spring"></i>
+            <h4>Spring Boot</h4>
+        </div>
+        <div class="skill-card"><i class="fab fa-html5 html"></i>
+            <h4>HTML</h4>
+        </div>
+        <div class="skill-card"><i class="fab fa-css3-alt css"></i>
+            <h4>CSS</h4>
+        </div>
+        <div class="skill-card"><i class="fas fa-database sql"></i>
+            <h4>PL/SQL</h4>
+        </div>
+    </div>
+    <div class="section-title">Database</div>
+    <div class="skills-container">
+        <div class="skill-card"><i class="fas fa-database    sql"></i>
+            <h4>MySQL</h4>
+        </div>
+        <div class="skill-card"><i class="fas fa-database sql"></i>
+            <h4>Oracle</h4>
+        </div>
     </div>
 
-    <!-- INTEGRATION SECTION -->
-    <div class="section-title">Integration & Database</div>
+
+    <!-- DEVELOPMENT SECTION -->
+    <div class="section-title">Cloud</div>
     <div class="skills-container">
-        <div class="skill-card"><i class="fas fa-code sql"></i><h4>SQL</h4></div>
-        <div class="skill-card"><i class="fas fa-file-code xml"></i><h4>XML</h4></div>
-        <div class="skill-card"><i class="fas fa-brackets-curly json"></i><h4>JSON</h4></div>
-        <div class="skill-card"><i class="fas fa-ticket-alt service"></i><h4>ServiceNow</h4></div>
-        <div class="skill-card"><i class="fas fa-tasks jira"></i><h4>Jira</h4></div>
-        <div class="skill-card"><i class="fas fa-paper-plane postman"></i><h4>Postman</h4></div>
-        <div class="skill-card"><i class="fas fa-database sql"></i><h4>PL/SQL</h4></div>
+
+
+        <div class="skill-card"><i class="fab fa-aws aws"></i>
+            <h4>AWS</h4>
+        </div>
+        <div class="skill-card"><i class="fas fa-users hcm"></i>
+            <h4>Oracle HCM Cloud</h4>
+        </div>
+        <div class="skill-card"><i class="fas fa-cloud oci"></i>
+            <h4>OCI</h4>
+        </div>
     </div>
 
     <!-- DEVELOPMENT SECTION -->
-    <div class="section-title">Development & Cloud</div>
+    <div class="section-title">Testing & Ticketing Tools</div>
     <div class="skills-container">
-        <div class="skill-card"><i class="fab fa-java java"></i><h4>Java</h4></div>
-        <div class="skill-card"><i class="fab fa-js js"></i><h4>JavaScript</h4></div>
-        <div class="skill-card"><i class="fas fa-leaf spring"></i><h4>Spring Boot</h4></div>
-        <div class="skill-card"><i class="fab fa-html5 html"></i><h4>HTML</h4></div>
-        <div class="skill-card"><i class="fab fa-css3-alt css"></i><h4>CSS</h4></div>
-        <div class="skill-card"><i class="fas fa-database mysql"></i><h4>MySQL</h4></div>
-        <div class="skill-card"><i class="fas fa-shield-alt sonar"></i><h4>SonarQube</h4></div>
-        <div class="skill-card"><i class="fab fa-aws aws"></i><h4>AWS</h4></div>
-        <div class="skill-card"><i class="fas fa-users hcm"></i><h4>Oracle HCM Cloud</h4></div>
-        <div class="skill-card"><i class="fas fa-cloud oci"></i><h4>OCI</h4></div>
+
+        <div class="skill-card"><i class="fas fa-shield-alt sonar"></i>
+            <h4>SonarQube</h4>
+        </div>
+        <div class="skill-card"><i class="fas fa-ticket-alt service"></i>
+            <h4>ServiceNow</h4>
+        </div>
+        <div class="skill-card"><i class="fas fa-tasks jira"></i>
+            <h4>Jira</h4>
+        </div>
+        <div class="skill-card"><i class="fas fa-paper-plane postman"></i>
+            <h4>Postman</h4>
+        </div>
+
     </div>
 
     <!-- DARK MODE SCRIPT -->
@@ -318,7 +452,9 @@
             icon.classList.add("fa-sun");
         }
     </script>
-
+    <footer>
+        © 2025 Madhu Kumar Y © All Rights Reserved.
+    </footer>
 </body>
 
 </html>
