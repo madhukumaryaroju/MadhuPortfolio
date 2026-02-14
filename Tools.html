@@ -6,10 +6,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Skills</title>
 
+    <!-- Google Font -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
     <style>
+
+        /* ================= GLOBAL ================= */
+
         * {
             margin: 0;
             padding: 0;
@@ -19,6 +25,7 @@
 
         body {
             background: linear-gradient(135deg, #eef2ff, #fdf4ff);
+            transition: 0.4s ease;
         }
 
         /* ================= NAVBAR ================= */
@@ -31,6 +38,7 @@
             justify-content: space-between;
             align-items: center;
             box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+            transition: 0.3s;
         }
 
         nav h3 {
@@ -40,6 +48,7 @@
         nav ul {
             list-style: none;
             display: flex;
+            align-items: center;
             gap: 25px;
         }
 
@@ -56,6 +65,19 @@
         nav ul li a:hover {
             background: #1f2a44;
             color: white;
+        }
+
+        /* Toggle Icon */
+
+        .toggle-icon {
+            font-size: 18px;
+            cursor: pointer;
+            color: #444;
+            transition: 0.3s;
+        }
+
+        .toggle-icon:hover {
+            transform: rotate(20deg);
         }
 
         /* ================= HEADER ================= */
@@ -130,72 +152,64 @@
 
         /* ================= BRAND COLORS ================= */
 
-        .java {
-            color: #f89820;
+        .java { color: #f89820; }
+        .js { color: #facc15; }
+        .spring { color: #22c55e; }
+        .html { color: #f97316; }
+        .css { color: #3b82f6; }
+        .mysql { color: #0ea5e9; }
+        .aws { color: #f59e0b; }
+        .oracle { color: #dc2626; }
+        .service { color: #16a34a; }
+        .jira { color: #2563eb; }
+        .postman { color: #f97316; }
+        .sql { color: #6366f1; }
+        .xml { color: #ec4899; }
+        .json { color: #0ea5e9; }
+        .sonar { color: #7c3aed; }
+        .hcm { color: #dc2626; }
+        .oci { color: #ea580c; }
+
+        /* ================= DARK MODE ================= */
+
+        body.dark {
+            background: #0f172a;
+            color: white;
         }
 
-        .js {
+        body.dark nav {
+            background: #1e293b;
+        }
+
+        body.dark nav ul li a {
+            color: #ddd;
+        }
+
+        body.dark nav ul li a.active,
+        body.dark nav ul li a:hover {
+            background: #facc15;
+            color: black;
+        }
+
+        body.dark .toggle-icon {
             color: #facc15;
         }
 
-        .spring {
-            color: #22c55e;
+        body.dark .section-header p {
+            color: #bbb;
         }
 
-        .html {
-            color: #f97316;
+        body.dark .section-title {
+            color: #facc15;
         }
 
-        .css {
-            color: #3b82f6;
+        body.dark .skill-card {
+            background: #1e293b;
+            box-shadow: 0 15px 40px rgba(0,0,0,0.5);
         }
 
-        .mysql {
-            color: #0ea5e9;
-        }
-
-        .aws {
-            color: #f59e0b;
-        }
-
-        .oracle {
-            color: #dc2626;
-        }
-
-        .service {
-            color: #16a34a;
-        }
-
-        .jira {
-            color: #2563eb;
-        }
-
-        .postman {
-            color: #f97316;
-        }
-
-        .sql {
-            color: #6366f1;
-        }
-
-        .xml {
-            color: #ec4899;
-        }
-
-        .json {
-            color: #0ea5e9;
-        }
-
-        .sonar {
-            color: #7c3aed;
-        }
-
-        .hcm {
-            color: #dc2626;
-        }
-
-        .oci {
-            color: #ea580c;
+        body.dark .skill-card h4 {
+            color: #f1f5f9;
         }
 
         /* ================= RESPONSIVE ================= */
@@ -211,6 +225,7 @@
                 grid-template-columns: repeat(2, 1fr);
             }
         }
+
     </style>
 </head>
 
@@ -224,11 +239,14 @@
             <li><a href="About.html">About</a></li>
             <li><a href="Experience.html">Work Experience</a></li>
             <li><a href="Tools.html" class="active">Skills & Tools</a></li>
-        <li><a href="Certifications.html">Certifications</a></li>
+            <li><a href="Certifications.html">Certifications</a></li>
             <li><a href="PersonalProjects.html">PersonalProjects</a></li>
             <li><a href="CONTACT.HTML">Contact</a></li>
 
-
+            <!-- Moon / Sun Icon -->
+            <li>
+                <i class="fas fa-moon toggle-icon" onclick="toggleMode()"></i>
+            </li>
         </ul>
     </nav>
 
@@ -241,83 +259,65 @@
     <!-- ORACLE SECTION -->
     <div class="section-title">Oracle & Reporting Tools</div>
     <div class="skills-container">
-        <div class="skill-card"><i class="fas fa-file-alt oracle"></i>
-            <h4>BI Publisher</h4>
-        </div>
-        <div class="skill-card"><i class="fas fa-chart-bar oracle"></i>
-            <h4>OTBI</h4>
-        </div>
-        <div class="skill-card"><i class="fas fa-database oracle"></i>
-            <h4>HCM Extracts</h4>
-        </div>
-        <div class="skill-card"><i class="fas fa-upload oracle"></i>
-            <h4>HDL</h4>
-        </div>
-        <div class="skill-card"><i class="fas fa-table oracle"></i>
-            <h4>HSDL</h4>
-        </div>
+        <div class="skill-card"><i class="fas fa-file-alt oracle"></i><h4>BI Publisher</h4></div>
+        <div class="skill-card"><i class="fas fa-chart-bar oracle"></i><h4>OTBI</h4></div>
+        <div class="skill-card"><i class="fas fa-database oracle"></i><h4>HCM Extracts</h4></div>
+        <div class="skill-card"><i class="fas fa-upload oracle"></i><h4>HDL</h4></div>
+        <div class="skill-card"><i class="fas fa-table oracle"></i><h4>HSDL</h4></div>
     </div>
 
     <!-- INTEGRATION SECTION -->
     <div class="section-title">Integration & Database</div>
     <div class="skills-container">
-        <div class="skill-card"><i class="fas fa-code sql"></i>
-            <h4>SQL</h4>
-        </div>
-        <div class="skill-card"><i class="fas fa-file-code xml"></i>
-            <h4>XML</h4>
-        </div>
-        <div class="skill-card"><i class="fas fa-brackets-curly json"></i>
-            <h4>JSON</h4>
-        </div>
-        <div class="skill-card"><i class="fas fa-ticket-alt service"></i>
-            <h4>ServiceNow</h4>
-        </div>
-        <div class="skill-card"><i class="fas fa-tasks jira"></i>
-            <h4>Jira</h4>
-        </div>
-        <div class="skill-card"><i class="fas fa-paper-plane postman"></i>
-            <h4>Postman</h4>
-        </div>
-        <div class="skill-card"><i class="fas fa-database sql"></i>
-            <h4>PL/SQL</h4>
-        </div>
+        <div class="skill-card"><i class="fas fa-code sql"></i><h4>SQL</h4></div>
+        <div class="skill-card"><i class="fas fa-file-code xml"></i><h4>XML</h4></div>
+        <div class="skill-card"><i class="fas fa-brackets-curly json"></i><h4>JSON</h4></div>
+        <div class="skill-card"><i class="fas fa-ticket-alt service"></i><h4>ServiceNow</h4></div>
+        <div class="skill-card"><i class="fas fa-tasks jira"></i><h4>Jira</h4></div>
+        <div class="skill-card"><i class="fas fa-paper-plane postman"></i><h4>Postman</h4></div>
+        <div class="skill-card"><i class="fas fa-database sql"></i><h4>PL/SQL</h4></div>
     </div>
 
     <!-- DEVELOPMENT SECTION -->
     <div class="section-title">Development & Cloud</div>
     <div class="skills-container">
-        <div class="skill-card"><i class="fab fa-java java"></i>
-            <h4>Java</h4>
-        </div>
-        <div class="skill-card"><i class="fab fa-js js"></i>
-            <h4>JavaScript</h4>
-        </div>
-        <div class="skill-card"><i class="fas fa-leaf spring"></i>
-            <h4>Spring Boot</h4>
-        </div>
-        <div class="skill-card"><i class="fab fa-html5 html"></i>
-            <h4>HTML</h4>
-        </div>
-        <div class="skill-card"><i class="fab fa-css3-alt css"></i>
-            <h4>CSS</h4>
-        </div>
-        <div class="skill-card"><i class="fas fa-database mysql"></i>
-            <h4>MySQL</h4>
-        </div>
-        <div class="skill-card"><i class="fas fa-shield-alt sonar"></i>
-            <h4>SonarQube</h4>
-        </div>
-        <div class="skill-card"><i class="fab fa-aws aws"></i>
-            <h4>AWS</h4>
-        </div>
-        <div class="skill-card"><i class="fas fa-users hcm"></i>
-            <h4>Oracle HCM Cloud</h4>
-        </div>
-        <div class="skill-card"><i class="fas fa-cloud oci"></i>
-            <h4>OCI</h4>
-        </div>
+        <div class="skill-card"><i class="fab fa-java java"></i><h4>Java</h4></div>
+        <div class="skill-card"><i class="fab fa-js js"></i><h4>JavaScript</h4></div>
+        <div class="skill-card"><i class="fas fa-leaf spring"></i><h4>Spring Boot</h4></div>
+        <div class="skill-card"><i class="fab fa-html5 html"></i><h4>HTML</h4></div>
+        <div class="skill-card"><i class="fab fa-css3-alt css"></i><h4>CSS</h4></div>
+        <div class="skill-card"><i class="fas fa-database mysql"></i><h4>MySQL</h4></div>
+        <div class="skill-card"><i class="fas fa-shield-alt sonar"></i><h4>SonarQube</h4></div>
+        <div class="skill-card"><i class="fab fa-aws aws"></i><h4>AWS</h4></div>
+        <div class="skill-card"><i class="fas fa-users hcm"></i><h4>Oracle HCM Cloud</h4></div>
+        <div class="skill-card"><i class="fas fa-cloud oci"></i><h4>OCI</h4></div>
     </div>
+
+    <!-- DARK MODE SCRIPT -->
+    <script>
+        function toggleMode() {
+            document.body.classList.toggle("dark");
+            const icon = document.querySelector(".toggle-icon");
+
+            if (document.body.classList.contains("dark")) {
+                icon.classList.remove("fa-moon");
+                icon.classList.add("fa-sun");
+                localStorage.setItem("mode", "dark");
+            } else {
+                icon.classList.remove("fa-sun");
+                icon.classList.add("fa-moon");
+                localStorage.setItem("mode", "light");
+            }
+        }
+
+        const icon = document.querySelector(".toggle-icon");
+
+        if (localStorage.getItem("mode") === "dark") {
+            document.body.classList.add("dark");
+            icon.classList.remove("fa-moon");
+            icon.classList.add("fa-sun");
+        }
+    </script>
 
 </body>
 
