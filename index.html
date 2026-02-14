@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Madhu Kumar Portfolio</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+
+    <style>
+        /* RESET */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            background: linear-gradient(135deg, #f5f7fa, #e4e8f0);
+            transition: 0.4s ease;
+        }
+
+        .dark-mode {
+            background: linear-gradient(135deg, #0f172a, #1e293b);
+            color: white;
+        }
+
+        /* ================= NAVBAR ================= */
+
+        nav{
+    width:100%;
+    background:white;
+    padding:15px 60px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    box-shadow:0 5px 20px rgba(0,0,0,0.05);
+}
+
+nav h3{
+    font-weight:700;
+}
+
+nav ul{
+    list-style:none;
+    display:flex;
+    gap:25px;
+}
+
+nav ul li a{
+    text-decoration:none;
+    color:#444;
+    font-weight:500;
+    padding:8px 15px;
+    border-radius:8px;
+    transition:.3s;
+}
+
+nav ul li a.active,
+nav ul li a:hover{
+    background:#1f2a44;
+    color:white;
+}
+
+
+        /* ================= HERO SECTION ================= */
+
+        .container {
+            flex: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 40px 80px;
+            gap: 60px;
+        }
+
+        .left {
+            flex: 1;
+        }
+
+        .left h1 {
+            font-size: 48px;
+            font-weight: 700;
+        }
+
+        .gradient-text {
+            background: linear-gradient(90deg, #6c63ff, #00c6ff);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .typing {
+            font-size: 26px;
+            margin: 15px 0;
+            color: #6c63ff;
+            font-weight: 600;
+        }
+
+        .left p {
+            max-width: 500px;
+            margin-bottom: 20px;
+            line-height: 1.6;
+        }
+
+        .socials {
+            display: flex;
+            gap: 20px;
+            font-size: 22px;
+            margin-top: 20px;
+        }
+
+        .socials i {
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .socials i:hover {
+            color: #6c63ff;
+            transform: scale(1.2);
+        }
+
+        /* ================= IMAGE ================= */
+
+        .right {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+        }
+
+        .image-card {
+            background: white;
+            padding: 20px;
+            border-radius: 20px;
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+            transition: 0.4s;
+        }
+
+        .image-card img {
+            width: 320px;
+            border-radius: 15px;
+        }
+
+        .image-card:hover {
+            transform: translateY(-10px);
+        }
+
+        /* ================= FOOTER ================= */
+
+        footer {
+            text-align: center;
+            padding: 15px;
+            font-size: 14px;
+        }
+
+        /* ================= RESPONSIVE ================= */
+
+        @media(max-width: 900px) {
+            body {
+                height: auto;
+            }
+
+            .container {
+                flex-direction: column-reverse;
+                text-align: center;
+                padding: 20px;
+            }
+
+            .left h1 {
+                font-size: 34px;
+            }
+
+            .image-card img {
+                width: 250px;
+            }
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+<nav>
+    <h3>Portfolio</h3>
+    <ul>
+        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="About.html" >About</a></li>
+        <li><a href="Experience.html" >Work Experience</a></li>
+        <li><a href="Tools.html" >Skills & Tools</a></li>
+        <li><a href="Certifications.html">Certifications</a></li>
+        <li><a href="PersonalProjects.html">PersonalProjects</a></li>
+        <li><a href="CONTACT.HTML" >Contact</a></li>
+
+
+    </ul>
+</nav>
+
+    <!-- HERO -->
+    <div class="container">
+
+        <div class="left">
+            <h1>Hi, I'm <span class="gradient-text">Anandaraj P</span></h1>
+            <div class="typing" id="typing"></div>
+
+            <p>
+                Java Full Stack Developer specializing in Spring Boot backend
+                and modern React-based frontend applications.
+            </p>
+
+            <div>📍 Chennai, Tamil Nadu | 📞 +91 9944196247</div>
+
+            <div class="socials">
+                <i class="fab fa-whatsapp"></i>
+                <i class="fab fa-linkedin"></i>
+                <i class="fab fa-github"></i>
+            </div>
+        </div>
+
+        <div class="right">
+            <div class="image-card">
+                <img src="im.jpeg" alt="Profile Image">
+            </div>
+        </div>
+
+    </div>
+
+    <!-- FOOTER -->
+    <footer>
+        © 2025 Anandaraj P ❤️ All Rights Reserved.
+    </footer>
+
+    <!-- SCRIPT -->
+    <script>
+        const roles = ["Java Developer", "Spring Boot Expert", "React Developer"];
+        let i = 0, j = 0;
+        let current = "";
+        let isDeleting = false;
+
+        function typeEffect() {
+            if (i < roles.length) {
+
+                if (!isDeleting && j <= roles[i].length) {
+                    current = roles[i].substring(0, j++);
+                }
+
+                if (isDeleting && j >= 0) {
+                    current = roles[i].substring(0, j--);
+                }
+
+                document.getElementById("typing").innerHTML = current;
+
+                if (j === roles[i].length) {
+                    isDeleting = true;
+                    setTimeout(typeEffect, 1000);
+                    return;
+                }
+
+                if (isDeleting && j === 0) {
+                    isDeleting = false;
+                    i++;
+                }
+
+            } else {
+                i = 0;
+            }
+
+            setTimeout(typeEffect, 100);
+        }
+
+        typeEffect();
+    </script>
+
+</body>
+</html>

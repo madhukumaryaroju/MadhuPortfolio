@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Skills</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            background: linear-gradient(135deg, #eef2ff, #fdf4ff);
+        }
+
+        /* ================= NAVBAR ================= */
+
+        nav {
+            width: 100%;
+            background: white;
+            padding: 15px 60px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+        }
+
+        nav h3 {
+            font-weight: 700;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 25px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #444;
+            font-weight: 500;
+            padding: 8px 15px;
+            border-radius: 8px;
+            transition: .3s;
+        }
+
+        nav ul li a.active,
+        nav ul li a:hover {
+            background: #1f2a44;
+            color: white;
+        }
+
+        /* ================= HEADER ================= */
+
+        .section-header {
+            text-align: center;
+            margin-top: 60px;
+        }
+
+        .section-header h1 {
+            font-size: 36px;
+            font-weight: 700;
+        }
+
+        .section-header span {
+            background: linear-gradient(90deg, #6366f1, #ec4899);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .section-header p {
+            margin-top: 12px;
+            color: #555;
+        }
+
+        /* ================= SECTION TITLE ================= */
+
+        .section-title {
+            margin: 50px 0 20px;
+            text-align: center;
+            font-size: 20px;
+            font-weight: 600;
+            color: #1f2a44;
+        }
+
+        /* ================= GRID ================= */
+
+        .skills-container {
+            max-width: 1200px;
+            margin: 20px auto 60px;
+            padding: 0 20px;
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 25px;
+        }
+
+        /* ================= CARD ================= */
+
+        .skill-card {
+            background: white;
+            border-radius: 18px;
+            padding: 30px 15px;
+            text-align: center;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+            transition: 0.4s;
+        }
+
+        .skill-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 18px 35px rgba(0, 0, 0, 0.15);
+        }
+
+        .skill-card i {
+            font-size: 40px;
+            margin-bottom: 12px;
+        }
+
+        .skill-card h4 {
+            font-size: 14px;
+            font-weight: 600;
+        }
+
+        /* ================= BRAND COLORS ================= */
+
+        .java {
+            color: #f89820;
+        }
+
+        .js {
+            color: #facc15;
+        }
+
+        .spring {
+            color: #22c55e;
+        }
+
+        .html {
+            color: #f97316;
+        }
+
+        .css {
+            color: #3b82f6;
+        }
+
+        .mysql {
+            color: #0ea5e9;
+        }
+
+        .aws {
+            color: #f59e0b;
+        }
+
+        .oracle {
+            color: #dc2626;
+        }
+
+        .service {
+            color: #16a34a;
+        }
+
+        .jira {
+            color: #2563eb;
+        }
+
+        .postman {
+            color: #f97316;
+        }
+
+        .sql {
+            color: #6366f1;
+        }
+
+        .xml {
+            color: #ec4899;
+        }
+
+        .json {
+            color: #0ea5e9;
+        }
+
+        .sonar {
+            color: #7c3aed;
+        }
+
+        .hcm {
+            color: #dc2626;
+        }
+
+        .oci {
+            color: #ea580c;
+        }
+
+        /* ================= RESPONSIVE ================= */
+
+        @media(max-width:1000px) {
+            .skills-container {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+
+        @media(max-width:600px) {
+            .skills-container {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+    <nav>
+        <h3>Portfolio</h3>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="About.html">About</a></li>
+            <li><a href="Experience.html">Work Experience</a></li>
+            <li><a href="Tools.html" class="active">Skills & Tools</a></li>
+        <li><a href="Certifications.html">Certifications</a></li>
+            <li><a href="PersonalProjects.html">PersonalProjects</a></li>
+            <li><a href="CONTACT.HTML">Contact</a></li>
+
+
+        </ul>
+    </nav>
+
+    <!-- HEADER -->
+    <div class="section-header">
+        <h1>My <span>Skills</span></h1>
+        <p>Oracle HCM + Full Stack Development Expertise</p>
+    </div>
+
+    <!-- ORACLE SECTION -->
+    <div class="section-title">Oracle & Reporting Tools</div>
+    <div class="skills-container">
+        <div class="skill-card"><i class="fas fa-file-alt oracle"></i>
+            <h4>BI Publisher</h4>
+        </div>
+        <div class="skill-card"><i class="fas fa-chart-bar oracle"></i>
+            <h4>OTBI</h4>
+        </div>
+        <div class="skill-card"><i class="fas fa-database oracle"></i>
+            <h4>HCM Extracts</h4>
+        </div>
+        <div class="skill-card"><i class="fas fa-upload oracle"></i>
+            <h4>HDL</h4>
+        </div>
+        <div class="skill-card"><i class="fas fa-table oracle"></i>
+            <h4>HSDL</h4>
+        </div>
+    </div>
+
+    <!-- INTEGRATION SECTION -->
+    <div class="section-title">Integration & Database</div>
+    <div class="skills-container">
+        <div class="skill-card"><i class="fas fa-code sql"></i>
+            <h4>SQL</h4>
+        </div>
+        <div class="skill-card"><i class="fas fa-file-code xml"></i>
+            <h4>XML</h4>
+        </div>
+        <div class="skill-card"><i class="fas fa-brackets-curly json"></i>
+            <h4>JSON</h4>
+        </div>
+        <div class="skill-card"><i class="fas fa-ticket-alt service"></i>
+            <h4>ServiceNow</h4>
+        </div>
+        <div class="skill-card"><i class="fas fa-tasks jira"></i>
+            <h4>Jira</h4>
+        </div>
+        <div class="skill-card"><i class="fas fa-paper-plane postman"></i>
+            <h4>Postman</h4>
+        </div>
+        <div class="skill-card"><i class="fas fa-database sql"></i>
+            <h4>PL/SQL</h4>
+        </div>
+    </div>
+
+    <!-- DEVELOPMENT SECTION -->
+    <div class="section-title">Development & Cloud</div>
+    <div class="skills-container">
+        <div class="skill-card"><i class="fab fa-java java"></i>
+            <h4>Java</h4>
+        </div>
+        <div class="skill-card"><i class="fab fa-js js"></i>
+            <h4>JavaScript</h4>
+        </div>
+        <div class="skill-card"><i class="fas fa-leaf spring"></i>
+            <h4>Spring Boot</h4>
+        </div>
+        <div class="skill-card"><i class="fab fa-html5 html"></i>
+            <h4>HTML</h4>
+        </div>
+        <div class="skill-card"><i class="fab fa-css3-alt css"></i>
+            <h4>CSS</h4>
+        </div>
+        <div class="skill-card"><i class="fas fa-database mysql"></i>
+            <h4>MySQL</h4>
+        </div>
+        <div class="skill-card"><i class="fas fa-shield-alt sonar"></i>
+            <h4>SonarQube</h4>
+        </div>
+        <div class="skill-card"><i class="fab fa-aws aws"></i>
+            <h4>AWS</h4>
+        </div>
+        <div class="skill-card"><i class="fas fa-users hcm"></i>
+            <h4>Oracle HCM Cloud</h4>
+        </div>
+        <div class="skill-card"><i class="fas fa-cloud oci"></i>
+            <h4>OCI</h4>
+        </div>
+    </div>
+
+</body>
+
+</html>

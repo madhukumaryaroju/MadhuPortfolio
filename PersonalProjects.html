@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Featured Projects</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+    background:#f4f6fb;
+}
+
+/* ================= NAVBAR ================= */
+nav{
+    width:100%;
+    background:white;
+    padding:15px 60px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    box-shadow:0 5px 20px rgba(0,0,0,0.05);
+}
+
+nav h3{
+    font-weight:700;
+}
+
+nav ul{
+    list-style:none;
+    display:flex;
+    gap:25px;
+}
+
+nav ul li a{
+    text-decoration:none;
+    color:#444;
+    font-weight:500;
+    padding:8px 15px;
+    border-radius:8px;
+    transition:.3s;
+}
+
+nav ul li a.active,
+nav ul li a:hover{
+    background:#1f2a44;
+    color:white;
+}
+
+
+/* ================= SECTION TITLE ================= */
+
+.section-header{
+    text-align:center;
+    margin-top:60px;
+}
+
+.section-header h1{
+    font-size:34px;
+    font-weight:700;
+}
+
+.section-header span{
+    color:#4f46e5;
+}
+
+.section-header p{
+    margin-top:10px;
+    color:#666;
+    font-size:14px;
+}
+
+/* ================= PROJECT GRID ================= */
+
+.project-container{
+    max-width:1200px;
+    margin:60px auto;
+    padding:0 20px;
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+    gap:40px;
+}
+
+/* ================= CARD ================= */
+
+.project-card{
+    background:white;
+    border-radius:18px;
+    box-shadow:0 10px 30px rgba(0,0,0,0.08);
+    overflow:hidden;
+    transition:.4s;
+}
+
+.project-card:hover{
+    transform:translateY(-8px);
+    box-shadow:0 20px 45px rgba(0,0,0,0.15);
+}
+
+.project-image{
+    height:180px;
+    background:linear-gradient(135deg,#dfe9f3,#ffffff);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-weight:600;
+    color:#444;
+}
+
+.project-content{
+    padding:25px;
+    text-align:center;
+}
+
+.badges{
+    display:flex;
+    justify-content:center;
+    gap:10px;
+    margin-bottom:15px;
+}
+
+.badge{
+    padding:5px 12px;
+    font-size:12px;
+    border-radius:15px;
+    font-weight:600;
+}
+
+.fullstack{
+    background:#e0f2fe;
+    color:#0369a1;
+}
+
+.completed{
+    background:#dcfce7;
+    color:#15803d;
+}
+
+.ongoing{
+    background:#fef9c3;
+    color:#a16207;
+}
+
+.project-content h3{
+    font-size:18px;
+    margin-bottom:10px;
+}
+
+.project-content p{
+    font-size:14px;
+    color:#555;
+    margin-bottom:15px;
+}
+
+.features{
+    font-size:13px;
+    color:#444;
+    margin-bottom:15px;
+}
+
+.tech-stack{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:8px;
+}
+
+.tech{
+    background:#e0e7ff;
+    color:#1e3a8a;
+    padding:5px 10px;
+    border-radius:15px;
+    font-size:12px;
+    font-weight:500;
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media(max-width:768px){
+    nav{
+        flex-direction:column;
+        gap:15px;
+        padding:15px 20px;
+    }
+}
+
+</style>
+</head>
+
+<body>
+
+<nav>
+    <h3>Portfolio</h3>
+    <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="About.html" >About</a></li>
+        <li><a href="Experience.html" >Work Experience</a></li>
+        <li><a href="Tools.html" >Skills & Tools</a></li>
+        <li><a href="Certifications.html">Certifications</a></li>
+        <li><a href="PersonalProjects.html" class="active">PersonalProjects</a></li>
+        <li><a href="CONTACT.HTML" >Contact</a></li>
+
+
+    </ul>
+</nav>
+
+<div class="section-header">
+    <h1>Featured <span>Projects</span></h1>
+    <p>An illustration of my full-stack works.</p>
+</div>
+
+<div class="project-container">
+
+    <!-- 1 -->
+    <div class="project-card">
+        <div class="project-image">Inventory System UI</div>
+        <div class="project-content">
+            <div class="badges">
+                <div class="badge fullstack">Full Stack</div>
+                <div class="badge completed">Completed</div>
+            </div>
+            <h3>Inventory Management</h3>
+            <p>AI powered inventory tracking & stock prediction system.</p>
+            <div class="features">
+                Tracking Faster <br>
+                Prevent Overstocking <br>
+                Avoid Stock Mistakes
+            </div>
+            <div class="tech-stack">
+                <div class="tech">HTML</div>
+                <div class="tech">CSS</div>
+                <div class="tech">JavaScript</div>
+                <div class="tech">Python</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 2 -->
+    <div class="project-card">
+        <div class="project-image">HR Analytics Dashboard</div>
+        <div class="project-content">
+            <div class="badges">
+                <div class="badge fullstack">Full Stack</div>
+                <div class="badge completed">Completed</div>
+            </div>
+            <h3>HR Analytics System</h3>
+            <p>Employee insights and workforce analytics platform.</p>
+            <div class="features">
+                Attrition Tracking <br>
+                Performance Metrics <br>
+                Data Visualization
+            </div>
+            <div class="tech-stack">
+                <div class="tech">React</div>
+                <div class="tech">NodeJS</div>
+                <div class="tech">MongoDB</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 3 -->
+    <div class="project-card">
+        <div class="project-image">E-Commerce UI</div>
+        <div class="project-content">
+            <div class="badges">
+                <div class="badge fullstack">Full Stack</div>
+                <div class="badge ongoing">Ongoing</div>
+            </div>
+            <h3>E-Commerce Platform</h3>
+            <p>Complete online store with payment gateway integration.</p>
+            <div class="features">
+                Secure Checkout <br>
+                Cart Management <br>
+                Admin Dashboard
+            </div>
+            <div class="tech-stack">
+                <div class="tech">Laravel</div>
+                <div class="tech">MySQL</div>
+                <div class="tech">Bootstrap</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 4 -->
+    <div class="project-card">
+        <div class="project-image">Attendance System</div>
+        <div class="project-content">
+            <div class="badges">
+                <div class="badge fullstack">Full Stack</div>
+                <div class="badge completed">Completed</div>
+            </div>
+            <h3>Smart Attendance</h3>
+            <p>Face recognition attendance tracking system.</p>
+            <div class="features">
+                Face Detection <br>
+                Real-time Logging <br>
+                Reports Export
+            </div>
+            <div class="tech-stack">
+                <div class="tech">Python</div>
+                <div class="tech">OpenCV</div>
+                <div class="tech">Flask</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 5 -->
+    <div class="project-card">
+        <div class="project-image">Task Manager UI</div>
+        <div class="project-content">
+            <div class="badges">
+                <div class="badge fullstack">Full Stack</div>
+                <div class="badge completed">Completed</div>
+            </div>
+            <h3>Task Management App</h3>
+            <p>Productivity tool for managing team tasks efficiently.</p>
+            <div class="features">
+                Task Scheduling <br>
+                Notifications <br>
+                Deadline Tracking
+            </div>
+            <div class="tech-stack">
+                <div class="tech">VueJS</div>
+                <div class="tech">Firebase</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 6 -->
+    <div class="project-card">
+        <div class="project-image">Financial Analytics</div>
+        <div class="project-content">
+            <div class="badges">
+                <div class="badge fullstack">Full Stack</div>
+                <div class="badge completed">Completed</div>
+            </div>
+            <h3>Finance Tracker</h3>
+            <p>Personal finance and expense tracking application.</p>
+            <div class="features">
+                Expense Reports <br>
+                Budget Forecasting <br>
+                Analytics Charts
+            </div>
+            <div class="tech-stack">
+                <div class="tech">Angular</div>
+                <div class="tech">NodeJS</div>
+                <div class="tech">PostgreSQL</div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+</body>
+</html>
